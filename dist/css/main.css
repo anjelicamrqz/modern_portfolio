@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -9,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #E7DFDD;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -57,14 +58,14 @@
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #4717f6; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #4717f6; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -72,11 +73,11 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: #E7DFDD;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #4717f6; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -95,7 +96,7 @@
 
 body {
   background: #151617;
-  color: #fff;
+  color: #E7DFDD;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -140,17 +141,18 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #4717f6; }
 
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
-  main .icon {
+  main .icons {
     margin-top: 1rem; }
-    main .icon a {
+    main .icons a {
       padding: 0.4rem; }
-      main .icon a:hover {
-        color: #eece1a;
+      main .icons a:hover {
+        color: #4717f6;
+        transition: all 0.5s ease-out;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -167,7 +169,7 @@ main {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #eece1a 3px solid; }
+  border: #4717f6 3px solid; }
 
 .bio {
   grid-area: bio;
@@ -185,7 +187,14 @@ main {
 .job {
   background: #212324;
   padding: 0.5rem;
-  border-bottom: #eece1a 5px solid; }
+  border-bottom: #4717f6 5px solid; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: black;
+  color: #E7DFDD;
+  height: 60px; }
 
 .projects {
   display: grid;
@@ -196,51 +205,55 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #4717f6;
       transition: all 0.5s ease-out; }
 
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #eece1a;
-      color: #000; }
-      .boxes div:hover span {
-        color: #000; }
+body {
+  background: #1e1e28; }
 
-.btn, .btn-dark, .btn-light {
-  display: block;
-  padding: 0.5rem 1rem;
+form {
+  max-width: 420px;
+  margin: 50px auto; }
+
+.feedback-input {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #4717f6;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0; }
+  .feedback-input:focus {
+    border: 2px solid #4717f6; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical; }
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #151617;
+  border-radius: 5px;
   border: 0;
-  margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
-    color: #000; }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
-
-.btn-light {
-  background: #91969a;
-  color: #333; }
-
-#main-footer {
-  text-align: center;
-  padding: 1rem;
-  background: black;
-  color: #fff;
-  height: 60px; }
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700; }
+  [type="submit"]:hover {
+    background: #4717f6; }
 
 @media screen and (min-width: 1171px) {
   .projects {

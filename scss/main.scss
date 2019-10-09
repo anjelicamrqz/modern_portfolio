@@ -54,7 +54,7 @@ main {
     // height: 100%;
     min-height: calc(100vh - 60px);
 
-    .icon {
+    .icons {
         margin-top: 1rem;
 
         a {
@@ -62,6 +62,7 @@ main {
 
             &:hover {
                 color: $secondary-color;
+                transition: all 0.5s ease-out;
                 @include easeOut();
             }
         }
@@ -115,6 +116,14 @@ main {
     border-bottom: $secondary-color 5px solid;
  }
 
+ #main-footer {
+     text-align: center;
+     padding: 1rem;
+     background: darken($primary-color, 10);
+     color: set-text-color($primary-color);
+     height: 60px;
+ }
+ 
  // Work/Projects
  .projects {
      display:grid;
@@ -134,61 +143,63 @@ main {
  }
 
  // Contact Page
- .boxes {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-evenly;
-     align-items: center;
-     margin-top: 1rem;
+ 
+ @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-     div {
-         font-size: 2rem;
-         border: 3px #fff solid;
-         padding: 1.5rem 2.5rem;
-         margin-bottom: 3rem;
-         @include easeOut;
+body {
+  background: rgb(30, 30, 40);
+}
 
-         &:hover {
-             padding: 0.5rem 1.5rem;
-             background: $secondary-color;
-             color: set-text-color($secondary-color);
-             span {
-                 color: set-text-color($secondary-color);
-             }
-         }
-     }
- }
+form {
+  max-width: 420px;
+  margin: 50px auto;
+}
 
- // Button Styles
- .btn {
-     display: block;
-     padding: 0.5rem 1rem;
-     border: 0;
-     margin-bottom: 0.3rem;
-     &:hover {
-         background: $secondary-color;
-         color: set-text-color($secondary-color);
-     }
- }
+.feedback-input {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #4717f6;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
 
- .btn-dark {
- @extend .btn;
- background: darken($primary-color, 50);
- color: #fff;
- }
+  &:focus {
+    border: 2px solid #4717f6;
+  }
+}
 
- .btn-light {
-    @extend .btn;
-    background: lighten($primary-color, 50);
-    color: #333;
- }
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
 
- #main-footer {
-     text-align: center;
-     padding: 1rem;
-     background: darken($primary-color, 10);
-     color: set-text-color($primary-color);
-     height: 60px;
- }
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: #151617;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+
+  &:hover {
+    background: #4717f6;
+  }
+}
 
  @import 'mobile';
